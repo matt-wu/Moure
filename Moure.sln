@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Filter", "Filter\Filter.vcproj", "{2328F787-71B4-408B-8E10-B7A95BF9A110}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Manager", "Manager\Manager.vcproj", "{F0E304B5-AF20-49F7-8183-5994C6EA889D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGridListCtrlEx", "CGridListCtrlEx\CGridListCtrlEx.vcproj", "{A0F8D7E6-2F18-4472-8434-C07BD9C15AB6}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectUniqueName0 = Filter\\Filter.vcproj
+		SccProjectName0 = Filter
+		SccLocalPath0 = Filter
+		CanCheckoutShared = true
+		SccProjectName1 = Moure
+		SccLocalPath1 = .
+		SccProvider1 = MSSCCI:Perforce\u0020P4\u0020SCM
+		CanCheckoutShared = true
+		SccProjectUniqueName2 = CGridListCtrlEx\\CGridListCtrlEx.vcproj
+		SccLocalPath2 = .
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection2 = CGridListCtrlEx\\
+		SccProjectUniqueName3 = Manager\\Manager.vcproj
+		SccLocalPath3 = .
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection3 = Manager\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2328F787-71B4-408B-8E10-B7A95BF9A110}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2328F787-71B4-408B-8E10-B7A95BF9A110}.Debug|Win32.Build.0 = Debug|Win32
+		{2328F787-71B4-408B-8E10-B7A95BF9A110}.Release|Win32.ActiveCfg = Release|Win32
+		{2328F787-71B4-408B-8E10-B7A95BF9A110}.Release|Win32.Build.0 = Release|Win32
+		{F0E304B5-AF20-49F7-8183-5994C6EA889D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F0E304B5-AF20-49F7-8183-5994C6EA889D}.Debug|Win32.Build.0 = Debug|Win32
+		{F0E304B5-AF20-49F7-8183-5994C6EA889D}.Release|Win32.ActiveCfg = Release|Win32
+		{F0E304B5-AF20-49F7-8183-5994C6EA889D}.Release|Win32.Build.0 = Release|Win32
+		{A0F8D7E6-2F18-4472-8434-C07BD9C15AB6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0F8D7E6-2F18-4472-8434-C07BD9C15AB6}.Debug|Win32.Build.0 = Debug|Win32
+		{A0F8D7E6-2F18-4472-8434-C07BD9C15AB6}.Release|Win32.ActiveCfg = Release|Win32
+		{A0F8D7E6-2F18-4472-8434-C07BD9C15AB6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

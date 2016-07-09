@@ -19,7 +19,7 @@ Introduction
 Supported OS
 ------------
 
-   Windows XP and later
+    Windows XP and later
     
     
 Story
@@ -40,14 +40,14 @@ Story
 Development  Guides
 -------------------
 
-   Project website: https://github.com/matt-wu/Moure
-   Requirements: VS2008 and WDK
+    Project website: https://github.com/matt-wu/Moure
+    Requirements: VS2008 and WDK
 
-   Moure is a kernel mouse class filter driver for Windows. So besides
-   buttons swapping, it can do everything upon HID events for mouses.
+    Moure is a kernel mouse class filter driver for Windows. So besides
+    buttons swapping, it can do everything upon HID events for mouses.
 
-   Thanks to Rolf Kristensen for his CGridListCtrlEx project:
-   https://github.com/snakefoot/cgridlistctrlex
+    Thanks to Rolf Kristensen for his CGridListCtrlEx project:
+    https://github.com/snakefoot/cgridlistctrlex
 
 
 Bugs or issues

@@ -2129,7 +2129,7 @@ bool CGridListCtrlEx::OnDisplayCellTooltip(int nRow, int nCol, CString& strResul
 //! @param pTI A pointer to a TOOLINFO structure
 //! @return Window control ID of the tooltip control (-1 if no tooltip control was found)
 //------------------------------------------------------------------------
-#if defined(_WIN64)
+#if defined(_WIN64) && !defined(_WDK_BUILD)
 INT_PTR CGridListCtrlEx::OnToolHitTest(CPoint point, TOOLINFO * pTI) const
 #else
 int CGridListCtrlEx::OnToolHitTest(CPoint point, TOOLINFO * pTI) const
@@ -2154,7 +2154,11 @@ int CGridListCtrlEx::OnToolHitTest(CPoint point, TOOLINFO * pTI) const
 	pTI->lpszText = LPSTR_TEXTCALLBACK;	// Send TTN_NEEDTEXT when tooltip should be shown
 	pTI->rect = rcClient;
 
+#if defined(_WIN64) && !defined(_WDK_BUILD)
+	return (INT_PTR)pTI->uId; // Must return a unique value for each cell (Marks a new tooltip control)
+#else
 	return (int)pTI->uId; // Must return a unique value for each cell (Marks a new tooltip control)
+#endif
 }
 
 //------------------------------------------------------------------------

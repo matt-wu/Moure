@@ -297,7 +297,7 @@ protected:
 
 	//{{AFX_VIRTUAL(CGridListCtrlEx)
 	virtual void PreSubclassWindow();
-#if defined(_WIN64)
+#if defined(_WIN64) && !defined(_WDK_BUILD)
 	virtual INT_PTR OnToolHitTest(CPoint point, TOOLINFO * pTI) const;
 #else
 	virtual int OnToolHitTest(CPoint point, TOOLINFO * pTI) const;

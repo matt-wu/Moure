@@ -1,0 +1,22 @@
+TARGETNAME=CGridListCtrlEx
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+C_DEFINES=/DUSE_MFC6_WITH_ATL7=1 /D_LIB=1 /D_WDK_BUILD=1 $(C_DEFINES)
+INCLUDES=   .;..\Filter\;                                                   \
+            $(DDK_INC_PATH);$(SDK_INC_PATH); $(MFC_INC_PATH);               \
+            $(MFC_INC_PATH)\..\atlmfc;$(INCLUDES)
+
+USE_STL=1
+STL_VER=70
+
+MSC_STDCALL=0
+386_STDCALL=0
+USE_MFCUNICODE=1
+
+SOURCES= CGridColumnTraitCombo.cpp  CGridColumnTraitDateTime.cpp            \
+         CGridColumnTraitEdit.cpp   CGridColumnTraitHyperLink.cpp           \
+         CGridColumnTraitImage.cpp  CGridColumnTraitMultilineEdit.cpp       \
+         CGridColumnTraitText.cpp   CGridListCtrlEx.cpp                     \
+         CGridListCtrlGroups.cpp    CGridRowTraitText.cpp                   \
+         CGridRowTraitXP.cpp        ViewConfigSection.cpp

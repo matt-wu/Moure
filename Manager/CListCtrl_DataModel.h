@@ -218,11 +218,6 @@ errorout:
             ts->mi_state |= MR_DEV_STATE_ENABLED;
         }
 
-        if (ts->mi_state == slot->mi_state) {
-            rc = 1;
-            goto errorout;
-        }
-
         /* update to kernel module */
         rc = WriteKernelMoure(mir, len);
 

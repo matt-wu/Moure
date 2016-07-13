@@ -1,6 +1,6 @@
 [Setup]
 AppName=Moure
-AppVerName=Moure 1.0
+AppVerName=Moure 1.2
 AppPublisher=Matt Wu
 AppCopyright=Copyright (c) 2016 Matt Wu
 AppPublisherURL=http://www.ext2fsd.com
@@ -10,7 +10,7 @@ DefaultDirName={pf}\Moure
 DefaultGroupName=Moure
 AllowNoIcons=true
 OutputDir=D:\Projects\Moure\bin
-OutputBaseFilename=Moure-1.0
+OutputBaseFilename=Moure-1.2
 Compression=lzma
 SolidCompression=true
 InternalCompressLevel=max
@@ -21,20 +21,21 @@ AllowUNCPath=false
 DisableReadyPage=true
 ShowLanguageDialog=auto
 MinVersion=0,5.1.2600
-AppVersion=1.0
-VersionInfoDescription=Moure V1.0 Setup
+AppVersion=1.2
+VersionInfoDescription=Moure V1.2 Setup
 UninstallRestartComputer=true
 Uninstallable=true
 ArchitecturesInstallIn64BitMode=x64
 
 
 [Files]
-Source: Manager\Release\Moure.exe; DestDir: {app}; Flags: ignoreversion; Components: driver
+Source: Manager\objfre_wxp_x86\i386\Moure.exe; DestDir: {app}; Flags: ignoreversion; Components: driver
 Source: Filter\winxp\fre\i386\moure.sys; DestDir: {sys}\Drivers; Components: driver; Check: not Is64BitInstallMode; MinVersion: 0,5.01.2600; Flags: restartreplace ignoreversion uninsrestartdelete promptifolder
 Source: Filter\winnet\fre\amd64\moure.sys; DestDir: {sys}\Drivers; Components: driver; Check: Is64BitInstallMode; MinVersion: 0,5.01.2600; Flags: restartreplace ignoreversion uninsrestartdelete promptifolder
 
 [Icons]
 Name: {group}\Swap Your Mouse Button; Filename: {app}\moure.exe; WorkingDir: {app}
+Name: {group}\Uninstall Moure; Filename: "{uninstallexe}"; WorkingDir: {app}
 
 [Run]
 Filename: {app}\moure.exe; Description: Configure your mouses right now ?; Flags: runascurrentuser nowait postinstall skipifsilent; WorkingDir: {app}

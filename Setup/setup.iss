@@ -1,6 +1,6 @@
 [Setup]
 AppName=Moure
-AppVerName=Moure 1.2
+AppVerName=Moure 1.3
 AppPublisher=Matt Wu
 AppCopyright=Copyright (c) 2016 Matt Wu
 AppPublisherURL=http://www.ext2fsd.com
@@ -10,7 +10,7 @@ DefaultDirName={pf}\Moure
 DefaultGroupName=Moure
 AllowNoIcons=true
 OutputDir=D:\Projects\Moure\bin
-OutputBaseFilename=Moure-1.2
+OutputBaseFilename=Moure-1.3
 Compression=lzma
 SolidCompression=true
 InternalCompressLevel=max
@@ -21,8 +21,8 @@ AllowUNCPath=false
 DisableReadyPage=true
 ShowLanguageDialog=auto
 MinVersion=0,5.1.2600
-AppVersion=1.2
-VersionInfoDescription=Moure V1.2 Setup
+AppVersion=1.3
+VersionInfoDescription=Moure V1.3 Setup
 UninstallRestartComputer=true
 Uninstallable=true
 ArchitecturesInstallIn64BitMode=x64

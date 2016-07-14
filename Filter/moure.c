@@ -540,7 +540,7 @@ NTSTATUS MrAddDevice(
     /* attach filter into target device stack */
     dcb->md_target = IoAttachDeviceToDeviceStack(
                             devobj, DeviceObject);
-    devobj->Flags |= DO_BUFFERED_IO;
+    devobj->Flags |= DO_BUFFERED_IO | DO_POWER_PAGABLE;
     devobj->Flags &= ~DO_DEVICE_INITIALIZING;
 
     /* insert dcb into global list */
@@ -615,7 +615,7 @@ NTSTATUS MrPower(
 {
     struct mr_dcb *dcb = DeviceObject->DeviceExtension;
 
-    /* just passthru all power requests */    
+    /* just passthru all power requests */
     PoStartNextPowerIrp(Irp);
     IoSkipCurrentIrpStackLocation(Irp);
     
@@ -998,7 +998,6 @@ NTSTATUS MrProcessUser(
             status = MrUserRead(DeviceObject, irp);
         } else if (iosp->MajorFunction == IRP_MJ_WRITE) {
             status = MrUserWrite(DeviceObject, irp);
-        } else if (iosp->MajorFunction == IRP_MJ_SHUTDOWN) {
         }
 
     } __finally {

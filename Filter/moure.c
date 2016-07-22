@@ -839,8 +839,6 @@ NTSTATUS MrUpdateHWs(ULONG s1, ULONG s2, PMR_DCB dcb)
     /* add new tag */
     if (s2 & MR_DEV_STATE_PERSIST) {
 
-        b = 0;
-
         n = dcb->md_did.Length / sizeof(WCHAR);
         if (p = MrStrStr(&dcb->md_did, L"&REV_", 5)) {
             if (p < dcb->md_did.Buffer + n)
@@ -855,7 +853,7 @@ NTSTATUS MrUpdateHWs(ULONG s1, ULONG s2, PMR_DCB dcb)
                 n = (ULONG)(p - dcb->md_did.Buffer);
         }
 
-        while (l < g_core.mc_dev_bytes/sizeof(WCHAR)) {
+        while (b < g_core.mc_dev_bytes/sizeof(WCHAR)) {
 
             s = g_core.mc_dev_list + b;
             if (l = wcslen(s)) {

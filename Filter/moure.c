@@ -853,6 +853,7 @@ NTSTATUS MrUpdateHWs(ULONG s1, ULONG s2, PMR_DCB dcb)
                 n = (ULONG)(p - dcb->md_did.Buffer);
         }
 
+        b = 0;
         while (b < g_core.mc_dev_bytes/sizeof(WCHAR)) {
 
             s = g_core.mc_dev_list + b;
